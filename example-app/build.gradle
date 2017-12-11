@@ -8,7 +8,7 @@ android {
     minSdkVersion 19
     targetSdkVersion lib_target_sdk
     versionCode lib_version_code
-    versionName "$lib_version"
+    versionName "$progress_button_version"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
@@ -21,7 +21,6 @@ android {
 
 dependencies {
   implementation "com.android.support:appcompat-v7:$support_version"
-
   implementation project(':max-width-layouts')
   implementation project(':progress-button')
 }

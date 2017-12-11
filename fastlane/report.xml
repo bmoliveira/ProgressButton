@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: Verifying required fastlane version" time="0.010124">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001945">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: Switch to android release_max_width_layouts lane" time="0.0037">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: gradle" time="13.786087">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: gradle" time="7.658815">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: Switch to android release_max_width_layouts_anko lane" time="0.001267">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: gradle" time="2.607182">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: gradle" time="5.889038">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: Switch to android release_progress_button lane" time="0.001261">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: gradle" time="7.068455">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: gradle" time="5.847184">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

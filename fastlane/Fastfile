@@ -1,0 +1,35 @@
+fastlane_version "2.68.2"
+
+default_platform :android
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Upload Max width layouts"
+  lane :release_max_width_layouts do
+    gradle(task: ":max-width-layouts:install")
+    gradle(task: ":max-width-layouts:bintrayUpload")
+  end
+
+  desc "Upload Max width layouts Anko Extensions"
+  lane :release_max_width_layouts_anko do
+    gradle(task: ":max-width-layouts-anko:install")
+    gradle(task: ":max-width-layouts-anko:bintrayUpload")
+  end
+
+  desc "Upload Progress Button"
+  lane :release_progress_button do
+    gradle(task: ":progress-button:install")
+    gradle(task: ":progress-button:bintrayUpload")
+  end
+
+  desc "Deploy all libs to maven"
+  lane :deploy do
+    release_max_width_layouts
+    release_max_width_layouts_anko
+    release_progress_button
+  end
+end

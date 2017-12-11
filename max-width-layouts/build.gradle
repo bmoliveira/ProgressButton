@@ -8,7 +8,7 @@ android {
     minSdkVersion 19
     targetSdkVersion lib_target_sdk
     versionCode lib_version_code
-    versionName "$lib_version"
+    versionName max_width_layouts_version
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
@@ -22,3 +22,47 @@ android {
 
 dependencies {
 }
+
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+def libArtifactId = "max-width-layouts"
+
+version = max_width_layouts_version
+group = groupId
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+//take a look at https://github.com/bintray/gradle-bintray-plugin#buildgradle
+bintray {
+  user = properties.getProperty("bintray.user")
+  key = properties.getProperty("bintray.apikey")
+
+  configurations = ['archives']
+  publish = true //[Default: false] Whether version should be auto published after an upload
+  override = false //[Default: false] Whether to override version artifacts already published
+
+  pkg {
+    repo = mavenRepo
+    name = libArtifactId
+    version {
+      name = max_width_layouts_version
+    }
+  }
+}
+
+install {
+  repositories.mavenInstaller {
+    pom.project {
+      packaging 'aar'
+      groupId groupId
+      artifactId libArtifactId
+      version max_width_layouts_version
+      name libArtifactId
+    }
+  }
+}
+
+apply from: '../deploy-tasks.gradle'

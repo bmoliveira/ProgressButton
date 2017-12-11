@@ -8,7 +8,7 @@ android {
     minSdkVersion 19
     targetSdkVersion lib_target_sdk
     versionCode lib_version_code
-    versionName "$lib_version"
+    versionName progress_button_version
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
@@ -24,3 +24,46 @@ dependencies {
   implementation project(':max-width-layouts')
   implementation project(':max-width-layouts-anko')
 }
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+def libArtifactId = "progress-button"
+
+version = progress_button_version
+group = groupId
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+//take a look at https://github.com/bintray/gradle-bintray-plugin#buildgradle
+bintray {
+  user = properties.getProperty("bintray.user")
+  key = properties.getProperty("bintray.apikey")
+
+  configurations = ['archives']
+  publish = true //[Default: false] Whether version should be auto published after an upload
+  override = false //[Default: false] Whether to override version artifacts already published
+
+  pkg {
+    repo = mavenRepo
+    name = libArtifactId
+    version {
+      name = progress_button_version
+    }
+  }
+}
+
+install {
+  repositories.mavenInstaller {
+    pom.project {
+      packaging 'aar'
+      groupId groupId
+      artifactId libArtifactId
+      version progress_button_version
+      name libArtifactId
+    }
+  }
+}
+
+apply from: '../deploy-tasks.gradle'

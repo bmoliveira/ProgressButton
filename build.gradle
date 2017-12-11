@@ -3,9 +3,13 @@
 buildscript {
   ext.kotlin_version = '1.2.0'
   ext.support_version = '27.0.2'
-  ext.lib_version = '1.0.0'
   ext.lib_version_code = 1
   ext.lib_target_sdk = 27
+
+  ext.progress_button_version = '0.0.2'
+  ext.max_width_layouts_version = '0.0.2'
+  ext.groupId = 'com.broliveira'
+  ext.mavenRepo = 'maven'
 
   repositories {
     google()
@@ -14,9 +18,9 @@ buildscript {
   dependencies {
     classpath 'com.android.tools.build:gradle:3.0.1'
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
-    // NOTE: Do not place your application dependencies here; they belong
-    // in the individual module build.gradle files
+    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+    classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.15"
   }
 }
 
