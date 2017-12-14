@@ -5,6 +5,7 @@ buildscript {
   ext.support_version = '27.0.2'
   ext.lib_version_code = 1
   ext.lib_target_sdk = 27
+  ext.anko_version = '0.10.1'
 
   ext.progress_button_version = '0.0.2'
   ext.max_width_layouts_version = '0.0.2'
