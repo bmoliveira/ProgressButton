@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import com.broliveira.view.maxwidthlayout.R
 
 class MaxWidthLinearLayout : LinearLayout {
   private val mMaxWidth: Int

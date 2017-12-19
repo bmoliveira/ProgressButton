@@ -3,6 +3,7 @@ apply from: '../common-dependencies.gradle'
 
 android {
   compileSdkVersion lib_target_sdk
+  buildToolsVersion build_tools_version
 
   defaultConfig {
     minSdkVersion 19
@@ -21,7 +22,7 @@ android {
 }
 
 dependencies {
-  implementation project(':max-width-layouts')
+  compileOnly project(':max-width-layouts')
   implementation "org.jetbrains.anko:anko:$anko_version"
 }
 

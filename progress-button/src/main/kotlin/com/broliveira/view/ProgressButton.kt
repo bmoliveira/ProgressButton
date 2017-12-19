@@ -22,7 +22,7 @@ class ProgressButton(
     defStyleRes: Int) : FrameLayout(context, attrs) {
 
   constructor(context: Context): this(context, null, 0 , 0)
-  constructor(context: Context, attrs: AttributeSet?): this(context, attrs, 0 , 0)
+  constructor(context: Context, attrs: AttributeSet?): this(context, attrs, 0, 0)
   constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int): this(context, attrs, defStyleAttr, 0)
 
   var title: CharSequence = "Sign In"

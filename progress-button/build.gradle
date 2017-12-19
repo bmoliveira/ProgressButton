@@ -3,6 +3,7 @@ apply from: '../common-dependencies.gradle'
 
 android {
   compileSdkVersion lib_target_sdk
+  buildToolsVersion build_tools_version
 
   defaultConfig {
     minSdkVersion 19

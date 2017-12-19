@@ -3,7 +3,6 @@ package com.broliveira.view.example
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.broliveira.view.R
 import kotlinx.android.synthetic.main.activity_example.*
 
 class ExampleActivity : AppCompatActivity() {

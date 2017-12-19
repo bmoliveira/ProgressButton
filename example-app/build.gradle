@@ -3,6 +3,8 @@ apply from: '../common-dependencies.gradle'
 
 android {
   compileSdkVersion lib_target_sdk
+  buildToolsVersion build_tools_version
+
   defaultConfig {
     applicationId "com.broliveira.view.example"
     minSdkVersion 19
@@ -21,6 +23,6 @@ android {
 
 dependencies {
   implementation "com.android.support:appcompat-v7:$support_version"
-  implementation project(':max-width-layouts')
   implementation project(':progress-button')
+  implementation project(':max-width-layouts')
 }

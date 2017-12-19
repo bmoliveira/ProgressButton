@@ -5,7 +5,6 @@ import android.graphics.Point
 import android.view.Gravity
 import android.view.ViewManager
 import org.jetbrains.anko.custom.ankoView
-import org.jetbrains.anko.db.INTEGER
 import org.jetbrains.anko.windowManager
 
 
