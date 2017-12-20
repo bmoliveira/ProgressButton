@@ -16,7 +16,6 @@ import android.widget.TextView
 import com.broliveira.view.progressbutton.R
 import org.jetbrains.anko.*
 
-
 class ProgressButton(
     context: Context,
     private val attrs: AttributeSet?,
@@ -206,7 +205,6 @@ class ProgressButton(
     get() = getAttributeBooleanValue(R.styleable.ProgressButton_pbIsLoading, attrs, context, R.styleable.ProgressButton, defStyleAttr, defStyleRes)
 }
 
-
 fun getThemeAttributeColorByName(themeAttr: String, context: Context): Int? {
   val resourceId = context.resources.getIdentifier(themeAttr, "color", context.packageName)
   return if (resourceId != 0) ContextCompat.getColor(context, resourceId)
@@ -293,6 +291,3 @@ fun getAttributeBooleanValue(
     ta.recycle()
   }
 }
-
-
-

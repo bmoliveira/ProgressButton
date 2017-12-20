@@ -2,17 +2,25 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="wrap_content"
+  android:layout_width="match_parent"
   android:layout_height="match_parent"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:orientation="vertical"
   tools:context="com.broliveira.view.example.ExampleActivity"
   >
-
   <com.broliveira.view.ProgressButton
     android:id="@+id/mainButton"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:pbTitle="Login"
+    app:pbTitleTypeFaceName="roboto"
+    app:pbTitleTextSize="20sp"
+    app:pbMinHeight="100dp"
+    app:pbButtonElevation="15dp"
+    app:pbIsLoading="false"
+    app:pbTitleColor="#aaa"
+    app:pbRippleBackgroundColor="#aff"
+    app:pbRippleSecondaryColor="#faa"
+    app:pbTitle="@string/app_name"
+    app:pbButtonRadius="30dp"
     />
 </LinearLayout>
