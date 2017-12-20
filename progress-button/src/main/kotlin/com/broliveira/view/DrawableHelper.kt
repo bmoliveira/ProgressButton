@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.RippleDrawable
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.StateListDrawable
+import android.graphics.drawable.shapes.RectShape
 import android.graphics.drawable.shapes.RoundRectShape
 import android.os.Build
 
@@ -32,6 +33,10 @@ object DrawableHelper {
   }
 
   fun getRoundRectShapeDrawable(color: Int, cornerRadius: Float): Drawable {
+    if (cornerRadius <= 0) {
+      return ShapeDrawable(RectShape()).also { it.paint.color = color }
+    }
+
     return FloatArray(8).also { it.fill(cornerRadius) }
         .let { RoundRectShape(it, null, null) }
         .let { ShapeDrawable(it) }

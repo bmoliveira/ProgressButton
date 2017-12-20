@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="ProgressButton">
+    <attr name="pbTitle" format="string|reference" />
+    <attr name="pbTitleColor" format="color|reference"/>
+    <attr name="pbTitleTypeFaceName" format="string"/>
+    <attr name="pbTitleTextSize" format="dimension|reference"/>
+    <attr name="pbMaxWidth" format="dimension|reference"/>
+    <attr name="pbMinHeight" format="dimension|reference"/>
+    <attr name="pbButtonElevation" format="dimension|reference"/>
+    <attr name="pbButtonRadius" format="dimension|reference"/>
+    <attr name="pbIsLoading" format="boolean"/>
+    <attr name="pbRippleBackgroundColor" format="color|reference"/>
+    <attr name="pbRippleSecondaryColor" format="color|reference"/>
+  </declare-styleable>
+</resources>
