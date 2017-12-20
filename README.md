@@ -1,10 +1,10 @@
-#Intro
+# Intro
 
 This repo contains 3 libs the Progress Button, MaxWidthLayouts and MaxWidthLayoutsAnko extensions.
 
---
+-
 
-#Progress button
+# Progress button
 
 A material button with rounded corners and a progress indicator on the right.
 
@@ -98,10 +98,10 @@ Anko example
       />
 ```
 
---
+-
 
 
-#Max Width Layouts
+# Max Width Layouts
 
 Current version
 -
@@ -111,9 +111,9 @@ Gradle Import
 -
 	implementation 'com.broliveira:max-width-layouts:<version>'
 
---
+-
 
-#Max Width Layouts Anko Extensons
+# Max Width Layouts Anko Extensons
 
 
 Current version
