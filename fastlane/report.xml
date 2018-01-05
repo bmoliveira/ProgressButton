@@ -5,57 +5,72 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: Verifying required fastlane version" time="0.010124">
+      <testcase classname="fastlane.lanes" name="00: Verifying required fastlane version" time="0.007786">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001945">
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.00222">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: Switch to android release_max_width_layouts lane" time="0.0037">
+      <testcase classname="fastlane.lanes" name="02: Switch to android release_max_width_layouts lane" time="0.001443">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: gradle" time="13.786087">
+      <testcase classname="fastlane.lanes" name="03: gradle" time="1.60262">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: gradle" time="7.658815">
+      <testcase classname="fastlane.lanes" name="04: gradle" time="3.409744">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: Switch to android release_max_width_layouts_anko lane" time="0.001267">
+      <testcase classname="fastlane.lanes" name="05: gradle" time="5.623882">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: gradle" time="2.607182">
+      <testcase classname="fastlane.lanes" name="06: Switch to android release_max_width_layouts_anko lane" time="0.001374">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: gradle" time="5.889038">
+      <testcase classname="fastlane.lanes" name="07: gradle" time="1.34403">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: Switch to android release_progress_button lane" time="0.001261">
+      <testcase classname="fastlane.lanes" name="08: gradle" time="3.703798">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: gradle" time="7.068455">
+      <testcase classname="fastlane.lanes" name="09: gradle" time="5.097002">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: gradle" time="5.847184">
+      <testcase classname="fastlane.lanes" name="10: Switch to android release_progress_button lane" time="0.001398">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: gradle" time="1.294903">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: gradle" time="5.108867">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: gradle" time="5.164737">
         
       </testcase>
     

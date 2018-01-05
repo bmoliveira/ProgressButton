@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.broliveira.view.MaxWidthRelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:orientation="vertical"
   tools:context="com.broliveira.view.example.ExampleActivity"
   >
   <com.broliveira.view.ProgressButton
@@ -22,5 +21,7 @@
     app:pbRippleSecondaryColor="#faa"
     app:pbTitle="@string/app_name"
     app:pbButtonRadius="30dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerVertical="true"
     />
-</LinearLayout>
+</com.broliveira.view.MaxWidthRelativeLayout>

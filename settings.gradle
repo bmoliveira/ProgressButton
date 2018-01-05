@@ -1,1 +1,1 @@
-include ':example-app', ':max-width-layouts', ':max-width-layouts-anko', ':progress-button'
+include ':example-app', ':max-width-layouts', ':max-width-layouts-anko', ':button-progress'

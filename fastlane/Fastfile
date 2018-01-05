@@ -10,20 +10,23 @@ platform :android do
 
   desc "Upload Max width layouts"
   lane :release_max_width_layouts do
+    gradle(task: "clean")
     gradle(task: ":max-width-layouts:install")
     gradle(task: ":max-width-layouts:bintrayUpload")
   end
 
   desc "Upload Max width layouts Anko Extensions"
   lane :release_max_width_layouts_anko do
+    gradle(task: "clean")
     gradle(task: ":max-width-layouts-anko:install")
     gradle(task: ":max-width-layouts-anko:bintrayUpload")
   end
 
   desc "Upload Progress Button"
   lane :release_progress_button do
-    gradle(task: ":progress-button:install")
-    gradle(task: ":progress-button:bintrayUpload")
+    gradle(task: "clean")
+    gradle(task: ":button-progress:install")
+    gradle(task: ":button-progress:bintrayUpload")
   end
 
   desc "Deploy all libs to maven"

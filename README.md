@@ -2,21 +2,19 @@
 
 This repo contains 3 libs the Progress Button, MaxWidthLayouts and MaxWidthLayoutsAnko extensions.
 
--
 
 # Progress button
 
 A material button with rounded corners and a progress indicator on the right.
-
 Important note, this lib was created in kotlin and uses anko-layouts internally and it has anko helpers to build the view.
 
 Current version
 -
-	0.0.3
+	0.1
 
 Gradle Import
 -
-	implementation 'com.broliveira:progress-button:<version>'
+	implementation 'com.broliveira:button-progress:0.1@aar'
 
 ## Custom XML attributes
 
@@ -105,11 +103,11 @@ Anko example
 
 Current version
 -
-	0.0.3
+	0.1
 
 Gradle Import
 -
-	implementation 'com.broliveira:max-width-layouts:<version>'
+	implementation 'com.broliveira:max-width-layouts:0.1@aar'
 
 -
 
@@ -118,8 +116,8 @@ Gradle Import
 
 Current version
 -
-	0.0.3
+	0.1
 
 Gradle Import
 -
-	implementation 'com.broliveira:max-width-layouts-anko:<version>'
+	implementation 'com.broliveira:max-width-layouts-anko:0.1@aar'
