@@ -42,7 +42,7 @@ Upload Progress Button
 ```
 fastlane android deploy
 ```
-Deploy all libs to maven
+Deploy all libs to bintray
 
 ----
 

@@ -6,13 +6,15 @@ import android.graphics.drawable.Drawable
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
+import com.broliveira.view.helper.AttributeGetter
+import com.broliveira.view.helper.DrawableHelper
+import com.broliveira.view.helper.setColor
 import com.broliveira.view.progressbutton.R
 import org.jetbrains.anko.*
 
@@ -20,7 +22,9 @@ class ProgressButton(
     context: Context,
     private val attrs: AttributeSet?,
     private val defStyleAttr: Int,
-    private val defStyleRes: Int) : FrameLayout(context, attrs) {
+    private val defStyleRes: Int) : FrameLayout(context, attrs), AttributeGetter {
+
+  override val defaultStyleable: IntArray? = R.styleable.ProgressButton
 
   constructor(context: Context): this(context, null, 0 , 0)
   constructor(context: Context, attrs: AttributeSet?): this(context, attrs, 0, 0)
@@ -114,6 +118,7 @@ class ProgressButton(
 
     progressView = progressBar {
       setColor(titleColor)
+      visibility = View.INVISIBLE
     }.lparams(dip(30), dip(30)){
       alignParentRight()
       centerVertically()
@@ -203,91 +208,4 @@ class ProgressButton(
 
   private val defaultIsLoading: Boolean
     get() = getAttributeBooleanValue(R.styleable.ProgressButton_pbIsLoading, attrs, context, R.styleable.ProgressButton, defStyleAttr, defStyleRes)
-}
-
-fun getThemeAttributeColorByName(themeAttr: String, context: Context): Int? {
-  val resourceId = context.resources.getIdentifier(themeAttr, "color", context.packageName)
-  return if (resourceId != 0) ContextCompat.getColor(context, resourceId)
-  else null
-}
-
-fun getThemeAttributeColor(themeAttrID: Int, context: Context): Int? {
-  val outValue = TypedValue()
-  val theme = context.theme
-  val wasResolved = theme.resolveAttribute(themeAttrID, outValue, true)
-  return if(!wasResolved) null
-  else if (outValue.resourceId != 0) ContextCompat.getColor(context, outValue.resourceId)
-  else outValue.data
-}
-
-fun getAttributeColorValue(
-    attributeId: Int,
-    attributeSet: AttributeSet?,
-    context: Context,
-    styleable: IntArray? = R.styleable.ProgressButton,
-    defStyleAttr: Int = 0,
-    defStyleRes: Int = 0
-): Int? {
-  val ta = context.obtainStyledAttributes(attributeSet, styleable, defStyleAttr, defStyleRes)
-  return try {
-    ta.getColor(attributeId, -1).let { if (it != -1) it else null }
-  } catch (ignored: Exception) {
-    null
-  } finally {
-    ta.recycle()
-  }
-}
-
-fun getAttributeStringValue(
-    attributeId: Int,
-    attributeSet: AttributeSet?,
-    context: Context,
-    styleable: IntArray? = R.styleable.ProgressButton,
-    defStyleAttr: Int = 0,
-    defStyleRes: Int = 0
-): String {
-  val ta = context.obtainStyledAttributes(attributeSet, styleable, defStyleAttr, defStyleRes)
-  return try {
-    ta.getString(attributeId)
-  } catch (ignored: Exception) {
-    ""
-  } finally {
-    ta.recycle()
-  }
-}
-
-fun getAttributeFloatValue(
-    attributeId: Int,
-    attributeSet: AttributeSet?,
-    context: Context,
-    styleable: IntArray? = R.styleable.ProgressButton,
-    defStyleAttr: Int = 0,
-    defStyleRes: Int = 0
-): Float? {
-  val ta = context.obtainStyledAttributes(attributeSet, styleable, defStyleAttr, defStyleRes)
-  return try {
-    ta.getDimension(attributeId, -1f).let { if (it != -1f)  it else null }
-  } catch (ignored: Exception) {
-    null
-  } finally {
-    ta.recycle()
-  }
-}
-
-fun getAttributeBooleanValue(
-    attributeId: Int,
-    attributeSet: AttributeSet?,
-    context: Context,
-    styleable: IntArray? = R.styleable.ProgressButton,
-    defStyleAttr: Int = 0,
-    defStyleRes: Int = 0
-): Boolean {
-  val ta = context.obtainStyledAttributes(attributeSet, styleable, defStyleAttr, defStyleRes)
-  return try {
-    ta.getBoolean(attributeId, false)
-  } catch (ignored: Exception) {
-    false
-  } finally {
-    ta.recycle()
-  }
 }

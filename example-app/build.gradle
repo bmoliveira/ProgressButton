@@ -23,10 +23,21 @@ android {
 
 dependencies {
   implementation "com.android.support:appcompat-v7:$supportVersion"
+  implementation "com.android.support:design:$supportVersion"
+
   implementation "org.jetbrains.anko:anko:$ankoVersion"
   implementation "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
+  implementation "org.jetbrains.anko:anko-design:$ankoVersion"
 
   implementation project(':button-progress')
+
+  implementation 'com.jakewharton.rxbinding2:rxbinding-kotlin:2.0.0'
+
+  implementation project(':button-countdown')
+  implementation project(':button-countdown-rx')
+
   implementation project(':max-width-layouts')
   implementation project(':max-width-layouts-anko')
+
+  implementation 'com.broliveira:android-extension:0.1'
 }

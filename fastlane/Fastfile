@@ -29,10 +29,21 @@ platform :android do
     gradle(task: ":button-progress:bintrayUpload")
   end
 
-  desc "Deploy all libs to maven"
+  desc "Deploy all libs to bintray"
   lane :deploy do
-    release_max_width_layouts
-    release_max_width_layouts_anko
-    release_progress_button
+    #release_max_width_layouts
+    #release_max_width_layouts_anko
+    #release_progress_button
+    deploy_module_bintray(module_name: "button-countdown", should_clean: true)
+    #release_module(module: "button-countdown-rx")
+  end
+
+  private_lane :release_module do |options|
+    module_name = options[:module]
+    UI.message "Deploying module: #{module_name} to bintray"
+    gradle(task: "clean")
+    gradle(task: ":#{module_name}:install")
+    gradle(task: ":#{module_name}:bintrayUpload")
+    UI.message "Module uploaded: #{module_name} to bintray, go to bintray to upload to JCenter."
   end
 end

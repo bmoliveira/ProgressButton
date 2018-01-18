@@ -1,4 +1,4 @@
-package com.broliveira.view
+package com.broliveira.view.helper
 
 import android.content.res.ColorStateList
 import android.graphics.Color

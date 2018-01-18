@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="CountdownButton">
+    <attr name="cdbTitle" format="string|reference" />
+    <attr name="cdbCountdownSeconds" format="integer|reference" />
+    <attr name="cdbTitleColor" format="color|reference"/>
+    <attr name="cdbTitleTypeFaceName" format="string"/>
+    <attr name="cdbTitleTextSize" format="dimension|reference"/>
+    <attr name="cdbMaxWidth" format="dimension|reference"/>
+    <attr name="cdbMinHeight" format="dimension|reference"/>
+    <attr name="cdbButtonElevation" format="dimension|reference"/>
+    <attr name="cdbButtonRadius" format="dimension|reference"/>
+    <attr name="cdbIsLoading" format="boolean"/>
+    <attr name="cdbRippleBackgroundColor" format="color|reference"/>
+    <attr name="cdbRippleSecondaryColor" format="color|reference"/>
+  </declare-styleable>
+</resources>

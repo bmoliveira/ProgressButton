@@ -21,10 +21,7 @@ android {
 }
 
 dependencies {
-  implementation project(':max-width-layouts')
-  implementation project(':max-width-layouts-anko')
+  compileOnly project(':button-countdown')
 
-  implementation "org.jetbrains.anko:anko:$ankoVersion"
-  implementation "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
-  implementation "com.android.support:appcompat-v7:$supportVersion"
+  implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
 }

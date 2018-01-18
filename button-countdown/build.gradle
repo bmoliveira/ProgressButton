@@ -24,6 +24,7 @@ dependencies {
   implementation project(':max-width-layouts')
   implementation project(':max-width-layouts-anko')
 
+  implementation 'com.github.guilhe:circular-progress-view:1.2.1'
   implementation "org.jetbrains.anko:anko:$ankoVersion"
   implementation "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
   implementation "com.android.support:appcompat-v7:$supportVersion"

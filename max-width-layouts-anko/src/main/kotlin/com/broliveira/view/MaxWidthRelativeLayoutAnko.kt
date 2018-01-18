@@ -7,7 +7,6 @@ import android.view.ViewManager
 import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.windowManager
 
-
 inline fun ViewManager.formRelativeLayout(
     context: Context,
     init: (MaxWidthRelativeLayout.() -> Unit) = {}
@@ -18,7 +17,7 @@ inline fun ViewManager.formRelativeLayout(
   return maxWidthRelativeLayout(Math.min(size.x, size.y), init)
 }
 
-inline fun ViewManager.maxWidthRelativeLayout(maxWidth: Int = Integer.MAX_VALUE): MaxWidthRelativeLayout = maxWidthRelativeLayout(maxWidth) {}
+inline fun ViewManager.maxWidthRelativeLayout(maxWidth: Int = Integer.MAX_VALUE) = maxWidthRelativeLayout(maxWidth) {}
 inline fun ViewManager.maxWidthRelativeLayout(
     maxWidth: Int = Integer.MAX_VALUE,
     init: MaxWidthRelativeLayout.() -> Unit
